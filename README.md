@@ -1,6 +1,6 @@
 # Remote server setup essentials
 
-First server connection
+First remote server connection
 
 ```bash
 ssh root@server-ip
@@ -42,7 +42,7 @@ ssh-copy-id user-name@server-ip
 ```
 
 Connect via a new user without password. All you have to do now is change ssh config and reload ssh service.
-Open `/etc/ssh/sshd_config` with something like `nano` (!with sudo ofc!) and make sure that this lines are exist and not commeted.
+Open `/etc/ssh/sshd_config` with something like `nano` (!with sudo ofc!) and make sure that this lines are exist and not commented.
 
 ```txt
 PasswordAuthentication no

@@ -1,4 +1,4 @@
-# Server setup essential
+# Remote server setup essentials
 
 First server connection
 

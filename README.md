@@ -111,6 +111,9 @@ Write to file: `/etc/fail2ban/jail.d/ssh-service-jail.conf`
 [ssh]
 enabled = true
 port = ssh
+findtime = 3600
+maxretry = 3
+bantime = 86400
 filter = sshd
 logpath = /var/log/auth.log
 ```
@@ -121,6 +124,9 @@ Write to file: `/etc/fail2ban/jail.d/sshd-service-jail.conf`
 [sshd]
 enabled = true
 port = ssh
+findtime = 3600
+maxretry = 3
+bantime = 86400
 filter = sshd
 logpath = %(sshd_log)s
 backend = %(sshd_backend)s
@@ -131,10 +137,11 @@ Write to file: `/etc/fail2ban/jail.d/defaults-debian.conf`
 ```ini
 [DEFAULT]
 igonreip = 127.0.0.1
-findtime = 3600
-maxretry = 3
-bantime = 86400
 ```
+
+> Do not write findtime, maxretry, bantime to `default` statement, because it may cause different
+> problems, undefined or conflicting behaviour in other services or policies because of the fact that default config
+> probably may contain already enabled policies
 
 ```bash
 # Restart service

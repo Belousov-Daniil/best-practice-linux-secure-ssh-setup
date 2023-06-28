@@ -1,0 +1,1 @@
+sudo fail2ban-client get test-123 banip --with-time

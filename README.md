@@ -1,4 +1,4 @@
-# Remote ssh setup on Linux essentials
+# Remote ssh setup essentials on remote Linux machine
 
     ███████╗███████╗██╗  ██╗
     ██╔════╝██╔════╝██║  ██║

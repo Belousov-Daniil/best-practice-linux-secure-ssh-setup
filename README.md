@@ -19,6 +19,16 @@ For bash by default this file is `~/.bashrc` or `~/.bash_profile`.
 After that you will be prompted for root password.
 Then, you will be connected to remote server terminal session.
 
+There is a chance to spawn multipule zombie-sessions due to closing your terminal without exiting remote session or losing a connection to the remote server. If that happens, identify current active sessions and send kill signal to stop them.
+
+```bash
+# Get current active user sessions
+w
+
+# Stop session process by killing it
+pkill -9 -t TTY-name
+```
+
 ### Change 'default' user
 
 Before any additional installations and setup you first need to secure your server, preventing
